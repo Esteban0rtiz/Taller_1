@@ -5,21 +5,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+    background-color: #c8e6c9; /* Cambia el color de fondo del contenedor a verde claro */
   }
   
   .login-form {
     width: 300px;
-    max-width: 100%;
+    margin-top: 20px;
   }
   
-  .full-width {
+  .mat-form-field {
     width: 100%;
-    margin-top: 10px;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #4caf50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el mouse sobre el botón */
   }
   
   .error-message {
-    color: #d32f2f; /* Red color for error messages */
+    color: red;
     margin-top: 10px;
   }
   

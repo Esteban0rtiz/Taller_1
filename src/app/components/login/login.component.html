@@ -1,26 +1,24 @@
 <!-- src/app/components/login/login.component.html -->
 
-<div>
+<div class="login-container">
     <h2>Iniciar Sesión</h2>
     
     <div *ngIf="loginError" class="error-message">
       Credenciales incorrectas. Por favor, inténtalo de nuevo.
     </div>
   
-    <form (submit)="login()">
+    <form class="login-form" (submit)="login()">
       <mat-form-field>
         <label for="username">Usuario:</label>
-        <!-- Agrega el atributo name -->
         <input matInput type="text" id="username" name="username" [(ngModel)]="username" required>
       </mat-form-field>
-      <br>
+  
       <mat-form-field>
         <label for="password">Contraseña:</label>
-        <!-- Agrega el atributo name -->
         <input matInput type="password" id="password" name="password" [(ngModel)]="password" required>
       </mat-form-field>
-      <br>
-      <button mat-raised-button type="submit">Iniciar Sesión</button>
+  
+      <button mat-raised-button color="primary" type="submit">Iniciar Sesión</button>
     </form>
   </div>
   

@@ -1,5 +1,8 @@
+// src/app/components/login/login.component.ts
+
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,18 +12,22 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent {
   username = '';
   password = '';
-  loginError = false;  // Asegúrate de que esta línea esté presente
+  loginError = false;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
-  login(): void {
-    this.authService.login(this.username, this.password)
-      .then((isAuthenticated) => {
-        // Lógica para manejar un inicio de sesión exitoso
-      })
-      .catch((error) => {
-        this.loginError = true;  // Establecer loginError en true si hay un error en el inicio de sesión
-        // Manejar errores
-      });
+  async login(): Promise<void> {
+    this.loginError = false; // Reiniciar el indicador de error
+
+    try {
+      // Llamar a la función de autenticación de manera asíncrona
+      await this.authService.login(this.username, this.password);
+
+      // Si llegamos aquí, la autenticación fue exitosa
+      this.router.navigate(['/main']);
+    } catch (error) {
+      console.error('Error en la autenticación:', error);
+      this.loginError = true; // Mostrar un mensaje de error en caso de excepción
+    }
   }
 }

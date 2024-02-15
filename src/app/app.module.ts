@@ -14,13 +14,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatExpansionModule } from '@angular/material/expansion';  // Agrega esta línea
+import { MatExpansionModule } from '@angular/material/expansion';
+import { EstudiantesFormularioComponent } from './components/estudiantes-formulario/estudiantes-formulario.component';
+import { ProfesoresFormularioComponent } from './components/profesores-formulario/profesores-formulario.component';  // Agrega esta línea
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainComponent
+    MainComponent,
+    EstudiantesFormularioComponent,
+    ProfesoresFormularioComponent
   ],
   imports: [
     BrowserModule,

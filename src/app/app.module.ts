@@ -16,7 +16,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { EstudiantesFormularioComponent } from './components/estudiantes-formulario/estudiantes-formulario.component';
-import { ProfesoresFormularioComponent } from './components/profesores-formulario/profesores-formulario.component';  // Agrega esta línea
+import { ProfesoresFormularioComponent } from './components/profesores-formulario/profesores-formulario.component';
+import { TablaComponent } from './components/tabla/tabla.component';
+ // Agrega esta línea
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ProfesoresFormularioComponent } from './components/profesores-formulari
     LoginComponent,
     MainComponent,
     EstudiantesFormularioComponent,
-    ProfesoresFormularioComponent
+    ProfesoresFormularioComponent,
+    TablaComponent
   ],
   imports: [
     BrowserModule,

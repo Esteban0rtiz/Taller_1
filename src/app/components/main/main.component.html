@@ -6,22 +6,16 @@
   </div>
 </section>
 
-<!-- Formulario de Selección de Usuario -->
-<section class="formulario">
+<!-- Sección de Cursos -->
+<section class="cursos">
   <div class="container">
-    <h2>Selecciona tu Tipo de Usuario</h2>
-    <div class="form-group">
-      <button class="btn btn-primary" (click)="showEstudiantesFormulario()">Estudiantes</button>
-      <button class="btn btn-primary" (click)="showProfesoresFormulario()">Profesores</button>
+    <h2>OPCIÓNES</h2>
+    <div class="curso-card">
+      <button class="btn btn-primary" [routerLink]="['/estudiantes']">Formulario de Estudiantes</button>
+      <button class="btn btn-primary" [routerLink]="['/profesores']">Formulario de Profesores</button>
     </div>
   </div>
 </section>
-
-<!-- Formulario de Estudiantes -->
-<app-estudiantes-formulario *ngIf="mostrarEstudiantesFormulario"></app-estudiantes-formulario>
-
-<!-- Formulario de Profesores -->
-<app-profesores-formulario *ngIf="mostrarProfesoresFormulario"></app-profesores-formulario>
 
 <!-- Pie de Página -->
 <footer class="footer">

@@ -1,1 +1,24 @@
-<p>estudiantes-formulario works!</p>
+<div class="container">
+    <h2>Formulario de Estudiantes</h2>
+    <form (ngSubmit)="submitForm()" #estudianteForm="ngForm">
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="text" class="form-control" id="id" name="id" [(ngModel)]="estudiante.id" required>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="estudiante.nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="estudiante.apellido" required>
+      </div>
+      <div class="form-group">
+        <label for="curso">Curso:</label>
+        <input type="text" class="form-control" id="curso" name="curso" [(ngModel)]="estudiante.curso" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+  </div>
+  <app-tabla></app-tabla>
+  
